@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --inline",
-    
     "build": "webpack",
     "test": "mocha",
-    "test": "wdio wdio.conf.js"
+    "wd": "wdio wdio.conf.js",
+    "sel": "java -jar selenium-server-standalone-2.53.0.jar"
   },
   "license": "ISC",
   "devDependencies": {

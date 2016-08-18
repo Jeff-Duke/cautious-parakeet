@@ -1,4 +1,6 @@
 const assert =  require('assert');
+const Events = require('../../lib/scripts/event-listeners')
+
 
 describe('welcome page', function(){
   it('should be able to grab the page title', function(){

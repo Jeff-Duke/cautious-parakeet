@@ -34,10 +34,12 @@ describe('chatroom page', function() {
       assert.equal(send, false);
     });
 
-    it.skip('should have the send button enabled when text is entered', function() {
+    it('should have the send button enabled when text is entered', function() {
       browser.url('/chatroom.html');
+      var messageInput = browser.element('#message-field');
+      messageInput.setValue('here is an example chat');
       var send = browser.isEnabled('#chat-send-button');
-      assert.equal(send, false);
+      assert.equal(send, true);
     });
 
     it('should clear the message input field when a message is sent', function() {
@@ -49,39 +51,31 @@ describe('chatroom page', function() {
     });
   });
   context('chat-body tests', function() {
-    it.skip('should have a section for displaying chat messages', function() {
+    it('should have a section for displaying chat messages', function() {
       browser.url('/chatroom.html');
-      var chatBody = browser.isExisting('#chat-body');
-      assert.equal(chatBody, true);
+      var chatRoomBody = browser.isExisting('#chatroom-body');
+      assert.equal(chatRoomBody, true);
     });
 
-    it.skip('should append a message to the page on submit', function() {
+    it('should append a message to the page on submit', function() {
       browser.url('/chatroom.html');
-      var messageInput = browser.element('#message-input');
+
+      var messageInput = browser.element('#message-field');
       messageInput.setValue('here is an example chat');
       browser.click('#chat-send-button');
-      var messageOnPage = browser.isExisting('.chat-message');
-      assert.equal(messageOnPage, true);
+
+      var messageOnPage = browser.getText('.chat-message');
+      assert.equal(messageOnPage, 'here is an example chat');
     });
 
-    it.skip('should have a way of making messages unique to the submitter', function() {
-
+    it('should have a way of making messages unique to the submitter', function() {
       browser.url('/chatroom.html');
-      var messageInput = browser.element('#message-input');
+      var messageInput = browser.element('#message-field');
       messageInput.setValue('here is an example chat');
       browser.click('#chat-send-button');
       var messageUnique = browser.isExisting('.chat-username');
 
       assert.equal(messageUnique, true);
     });
-    // it.skip('should have messages appended in reverse-chron order', function() {
-    //   browser.url('/chatroom.html');
-    //   var messageInput = browser.element('#message-input');
-    //   messageInput.setValue('example chat 1');
-    //   browser.click('#chat-send-button');
-    //   messageInput.setValue('example chat 1');
-    //   browser.click('#chat-send-button');
-    //   assert.equal(messageOnPage, true);
-    // });
   });
 });

@@ -10,12 +10,17 @@
     <input type="button" class="button" id="logout-button" value="Logout">
   </header>
   <body>
+
+    <h2 id="username-field">jeff</h2>
+    <input type="button" id="more-messages-button" value="Show more messages" disabled>
+    
     <section id="chatroom-body"></section>
     <footer>
       <form id="message-input">
         <input type="text" id="message-field" placeholder="Message">
         <input type="button" id="message-send-button" value="Send" disabled>
       </form>
+      <article class="char-counter">Character count: <span id="char-count">0</span>  </article>
     </footer>
 
     <script src="main.bundle.js"></script>

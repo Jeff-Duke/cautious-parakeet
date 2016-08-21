@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
-const Chat = require('../../lib/scripts/chat');
-const ChatRoom = require('../../lib/scripts/chat');
+const Chat = require('../../lib/scripts/chatroom');
+const ChatRoom = require('../../lib/scripts/chatroom');
 
 describe('our test bundle', function() {
   it('should work', function() {

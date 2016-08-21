@@ -1,0 +1,13 @@
+$text-size-h1: 2em;
+$text-size-h2: 1.75em;
+$text-size-h3: 1.5em;
+$text-size-h4: 1.25em;
+$text-size-p: 1em;
+$text-size-small: 0.8em;
+
+h1     { font-size: $text-size-h1}
+h2     { font-size: $text-size-h2}
+h3     { font-size: $text-size-h3}
+h4     { font-size: $text-size-h4}
+p      { font-size: $text-size-p }
+.small { font-size: $text-size-small}

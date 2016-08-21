@@ -1,0 +1,15 @@
+@import 'text-styles';
+@import 'text-sizes';
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  color: $color-text-primary;
+  font-family: $font-catamaran;
+  // font-size: $p;
+}
+
+footer {
+margin-top:auto;
+}

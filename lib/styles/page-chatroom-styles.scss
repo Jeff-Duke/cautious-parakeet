@@ -3,25 +3,58 @@
 @import 'message-user';
 @import 'message-other';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  display: flex;
   align-items: center;
-  min-height: 100vh;
-  flex-direction: column;
   color: $color-text-primary;
+  display: flex;
+  flex-direction: column;
   font-family: $font-catamaran;
+  overflow-y: scroll;
 }
 
 footer {
-margin-top:auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 0 auto;
+  margin-bottom: 15px;
+  margin-top: auto;
+  width: 375px;
+}
+
+.parakeet-logo {
+  border-radius: 50%;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
 }
 
 #chatroom-body {
-  height: 80vh;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-end;
   width: 375px;
-  background-color: green;
+  height: 375px;
+  overflow-y: scroll;
+  overflow: auto;
+}
+
+#message-input {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+#message-field {
+  height: 2em;
+  border-radius: 5px;
+  width: 300px;
 }

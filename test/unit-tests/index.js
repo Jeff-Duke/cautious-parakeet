@@ -4,30 +4,25 @@ const ChatRoom = require('../../lib/scripts/chatroom');
 const _globals = require('../../lib/scripts/global-variables')
 
 describe('chat room methods', function() {
-  it.skip('should create a new message when createNewMessage() is called', function(username,message) {
+  it.skip('should create a new message when generateNewMessage() is called', function(username,message) {
     ChatRoom.generateNewMessage(username='test', message='hello');
     assert.equal('.user-message', true);
   });
 
-  it.skip('should store a chat in the chatArray when collectNewChat is called', function(chat) {
+  it('should store a chat in the messageArray when messageToArray is called', function(done) {
     ChatRoom.messageArray = [];
-    ChatRoom.generateNewMessage(username='test', message='hello');
+    ChatRoom.generateNewMessage('test', 'hello');
     assert.equal(ChatRoom.messageArray.length, 1);
+    done();
   });
 
-  it.skip('should store the array in localStorage when storeTheChatArray() is called', function() {
-    ChatRoom.generateNewMessage(username='test', message='hello');
-    assert.equal(localStorage, messageArray);
-  });
-
-  it.skip('should disable the chatSendButton when disableButton() is called', function() {
-    ChatRoom.disableSendButton();
-    assert.equal(_globals.$messageSendButton.prop('disabled'), true);
-  });
-
-  it.skip('should enable the chatSendButton when enableButton() is called', function() {
-    ChatRoom.enableSendButton();
-    assert.equal(_globals.$messageSendButton.prob('disabled'), false);
+  it('should store the array in localStorage when storeTheMessageArray() is called', function() {
+    ChatRoom.messageArray = [];
+    ChatRoom.generateNewMessage('test', 'hello');
+    var test = JSON.parse(localStorage.messageArray)
+    assert.equal(test[0].id, ChatRoom.messageArray[0].id);
+    assert.equal(test[0].username, ChatRoom.messageArray[0].username);
+    assert.equal(test[0].message, ChatRoom.messageArray[0].message);
   });
 
 });

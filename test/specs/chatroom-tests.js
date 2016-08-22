@@ -34,6 +34,7 @@ describe('chatroom page', function() {
       assert.equal(messageInput.getValue(), '');
     });
   });
+  
   context('chat-body tests', function() {
     it('should have a section for displaying chat messages', function() {
       var chatRoomBody = browser.isExisting('#chatroom-body');

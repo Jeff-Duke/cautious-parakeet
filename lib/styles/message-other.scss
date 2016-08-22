@@ -1,0 +1,28 @@
+.other-message {
+  align-items: center;
+  background-color: $color-canary-yellow;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 275px;
+}
+
+.other-message-username {
+  font-weight: 700;
+  margin-left: 5px;
+  margin-right: auto;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.other-message-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.other-message-text {
+  padding: 10px;
+  margin-right: auto;
+}

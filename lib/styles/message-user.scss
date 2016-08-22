@@ -1,0 +1,33 @@
+.user-message {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: red;
+  width: 275px;
+  margin-top: 10px;
+}
+
+.user-message-header {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  background-color: blue;
+}
+
+.message-username {
+  padding: 10px;
+}
+
+.user-message-text {
+  background-color: yellow;
+  padding: 10px;
+  text-align: right;
+}
+
+.remove-message-button {
+  height: 1.5em;
+}
+
+.edit-message-button {
+  height: 1.5em;
+}

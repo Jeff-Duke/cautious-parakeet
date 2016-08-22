@@ -29,12 +29,18 @@
 }
 
 .remove-message-button {
-  // background: url(../img/delete.svg) no-repeat;
+  border: none;
+  background: url(/lib/img/delete.svg) no-repeat;
+  background-size: cover;
   height: 1.5em;
+  width: 1.5em;
 
 }
 
 .edit-message-button {
-  // background: url(../img/edit.svg) no-repeat;
+  border: none;
+  background: url(/lib/img/edit.svg) no-repeat;
+  background-size: cover;
   height: 1.5em;
+  width: 1.5em;
 }

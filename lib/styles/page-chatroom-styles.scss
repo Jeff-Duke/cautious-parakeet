@@ -1,15 +1,27 @@
 @import 'text-styles';
 @import 'text-sizes';
+@import 'message-user';
+@import 'message-other';
 
 body {
   display: flex;
+  align-items: center;
   min-height: 100vh;
   flex-direction: column;
   color: $color-text-primary;
   font-family: $font-catamaran;
-  // font-size: $p;
 }
 
 footer {
 margin-top:auto;
+}
+
+#chatroom-body {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 375px;
+  background-color: green;
 }

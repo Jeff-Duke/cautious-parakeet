@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 const Chat = require('../../lib/scripts/chatroom');
 const ChatRoom = require('../../lib/scripts/chatroom');
-const _globals = require('../../lib/scripts/global-variables')
+const _globals = require('../../lib/scripts/global-variables');
 
 describe('chat room methods', function() {
   it.skip('should create a new message when generateNewMessage() is called', function(username,message) {
